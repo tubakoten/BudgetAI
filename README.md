@@ -1,16 +1,133 @@
-# React + Vite
+# 💰 BudgetAI — Monthly Budget Tracking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> COME 342 Introduction to Software Engineering — Term Project, Spring 2025–2026
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 👥 Group Members
 
-## React Compiler
+| Name | Student No |
+|------|-----------|
+| Tuba Köten | — |
+| Fatma Işıl Belek | — |
+| Begüm Karakoç | — |
+| İrem Ceran | — |
+| Rabia Güler | — |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 About the Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+BudgetAI is a mobile-first web application that helps students and young professionals in high-cost cities like Istanbul take control of their monthly finances. It reduces financial stress by providing real-time budget tracking, automated recurring transactions, proactive overspending alerts, and visual spending analytics — all with minimal manual effort.
+
+---
+
+## ✨ Features
+
+- 🔐 **Authentication** — Secure email & password login with Supabase Auth
+- ➕ **Manual Transactions** — Add income or expense entries in under 3 seconds
+- 🤖 **Automation** — Monthly salary and rent proposals with user confirm/cancel control
+- 📊 **Dashboard** — Real-time summary of income, expenses, and remaining budget
+- ⚠️ **Smart Alerts** — Yellow alert at 80% budget usage, red alert at 100%
+- 🍩 **Spending Chart** — Doughnut chart showing expense breakdown by category
+- ↩️ **Undo** — Restore accidentally deleted transactions within 5 seconds
+- 📱 **Mobile-First** — Fully responsive on all screen sizes
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React + Vite |
+| Styling | Tailwind CSS |
+| Database | Supabase (PostgreSQL) |
+| Auth | Supabase Auth |
+| Architecture | Layered Architecture (Data / Business / UI) |
+
+---
+
+## 🗂️ Project Structure
+
+```
+src/
+└── layers/
+    ├── business/
+    │   ├── budgetService.js       # Budget calculations
+    │   └── alertService.js        # Alert level logic
+    ├── data/
+    │   ├── supabaseClient.js      # Supabase connection
+    │   └── transactionRepository.js # DB queries
+    └── ui/
+        ├── components/
+        │   ├── Dashboard.jsx
+        │   ├── TransactionForm.jsx
+        │   ├── TransactionList.jsx
+        │   └── SpendingChart.jsx
+        └── hooks/
+            └── useTransactions.js
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js v18+
+- A Supabase account (free tier)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/tubakoten/BudgetAI.git
+cd BudgetAI
+
+# Install dependencies
+npm install
+```
+
+### Environment Setup
+
+Create a `.env` file in the project root:
+
+```
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
+
+Get these values from your Supabase project → **Settings → API**.
+
+### Database Setup
+
+Run the SQL schema in your Supabase SQL Editor:
+
+```sql
+-- See /docs/schema.sql for the full script
+```
+
+### Run the App
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 📐 Architecture
+
+BudgetAI follows a **Layered Architecture** that strictly separates concerns:
+
+- **Data Layer** — Handles all Supabase queries. No UI logic.
+- **Business Logic Layer** — Pure functions for budget calculations and alert levels. No database or UI dependencies.
+- **Presentation Layer** — React components and hooks. Calls business functions; never touches the database directly.
+
+This structure makes each layer independently testable and replaceable.
+
+---
+
+## 📄 License
+
+This project was developed for academic purposes as part of COME 342 at the university. All rights reserved by the project group.
