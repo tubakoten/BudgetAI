@@ -6,10 +6,10 @@
 
 ## 👥 Group Members
 
-| Name | Student No |
+| Name | GitHub |
 |------|-----------|
 | Tuba Köten | — |
-| Fatma Işıl Belek | — |
+| Fatma Işıl Belek | https://github.com/isilbelekk-collab |
 | Begüm Karakoç | — |
 | İrem Ceran | — |
 | Rabia Güler | — |
