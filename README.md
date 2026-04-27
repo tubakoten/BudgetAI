@@ -8,7 +8,7 @@
 
 | Name | GitHub |
 |------|-----------|
-| Tuba Köten | — |
+| Tuba Köten | https://github.com/tubakoten |
 | Fatma Işıl Belek | https://github.com/isilbelekk-collab |
 | Begüm Karakoç | — |
 | İrem Ceran | — |
