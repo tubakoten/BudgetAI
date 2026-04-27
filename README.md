@@ -9,10 +9,10 @@
 | Name | GitHub |
 |------|-----------|
 | Tuba Köten | https://github.com/tubakoten |
+| Rabia Güler | https://github.com/rabia0guler |
 | Fatma Işıl Belek | https://github.com/isilbelekk-collab |
-| Begüm Karakoç | — |
+| Begüm Karakoç | https://github.com/begumkrkcc-coder |
 | İrem Ceran | — |
-| Rabia Güler | — |
 
 ---
 
